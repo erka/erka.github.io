@@ -64,13 +64,19 @@ nav .brand-logo {
   }
   img {
     @extend .z-depth-1;
-    width: 100%;
+    max-width: 100%;
   }
 }
 i.postedat {
   color: $grey-color;
 }
 
-.post p {
-  text-align: justify;
+.post article {
+  h1 {
+    font-size: $h4-fontsize;
+  }
+  p {
+    text-align: justify;
+  }
+
 }

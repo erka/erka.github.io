@@ -3,13 +3,19 @@ layout: default
 ---
 <div class="post container">
 <div class="row">
-  <header class="post-header">
-    <h1 class="post-title header">{{ page.title }}</h1>
+  <article class="s12">
+    <h1>{{ page.title }}</h1>
     <p class="post-meta badge">{{ page.date | date: "%b %-d, %Y" }}</p>
-  </header>
-
-  <article class="post-content s12">
     {{ content }}
   </article>
+  {% if page.previous %}
+    <a class="btn waves-effect waves-light left orange accent-2"  rel="next" href="{{ page.previous.url }}">
+      <i class="mdi-hardware-keyboard-arrow-left"></i></a>
+   {% endif %}
+   {% if page.next %}
+     <a class="btn waves-effect waves-light right orange accent-2"  rel="next" href="{{ page.next.url }}">
+         <i class="mdi-hardware-keyboard-arrow-right"></i>
+     </a>
+   {% endif %}
 </div>
 </div>
