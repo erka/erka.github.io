@@ -1,0 +1,10 @@
+/* MAIN */
+  Develop & Main Design: Roman Dmytrenko
+  Contact: erka [at] kpumuk.info
+  Site: http://erka.github.io
+  From: Ukraine
+
+/* SITE */
+  Last update: {{ site.time | date: "%m/%d/%Y" }}
+  Doctype: HTML5
+  Language: English / Russian

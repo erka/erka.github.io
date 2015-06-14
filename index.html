@@ -2,22 +2,39 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+<div class="home container">
+  <div class="row">
+    {% for post in site.posts offset: 0 limit: 1 %}
+    <div class="col s12">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ post.thumbnail }}">
+        </div>
+        <div class="card-content">
+          {{ post.title }}
+        </div>
+        <div class="card-action">
+          <i class="postedat">{{ post.date | date: "%b %-d, %Y" }}</i>
+          <a class="right" href="{{ post.url | prepend: site.baseurl }}">Read</a>
+        </div>
+      </div>
+    </div>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+    {% for post in site.posts offset: 1 limit: 2 %}
+      <div class="col s12 m6">
+        <div class="card small">
+          <div class="card-image">
+            <img src="{{ post.thumbnail }}">
+          </div>
+          <div class="card-content">
+            {{ post.title }}
+          </div>
+          <div class="card-action">
+            <i class="postedat">{{ post.date | date: "%b %-d, %Y" }}</i>
+            <a class="right" href="{{ post.url | prepend: site.baseurl }}">Read</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>

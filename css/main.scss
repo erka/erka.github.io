@@ -46,7 +46,27 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+        "materialize"
 ;
+
+nav .brand-logo {
+  color: $text-color;
+}
+
+
+.photo {
+  text-align: center;
+  color: lighten($grey-color, 20%);
+  margin-bottom: 0.7em;
+  span {
+    font-size: 0.7em;
+    font-style: italic;
+  }
+  img {
+    @extend .z-depth-1;
+    width: 100%;
+  }
+}
+i.postedat {
+  color: $grey-color;
+}
