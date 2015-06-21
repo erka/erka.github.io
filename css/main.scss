@@ -65,6 +65,7 @@ nav .brand-logo {
   img {
     @extend .z-depth-1;
     max-width: 100%;
+    max-height: 75%;
   }
 }
 i.postedat {
@@ -73,7 +74,7 @@ i.postedat {
 
 .post article {
   h1 {
-    font-size: $h4-fontsize;
+    font-size: $h4-fontsize; line-height: 1.1*$h4-fontsize; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0;
   }
   p {
     text-align: justify;
