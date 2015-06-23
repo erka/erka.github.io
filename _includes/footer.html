@@ -19,4 +19,18 @@
       &copy; {{ site.time | date: "%Y" }} <a class="grey-text text-lighten-3" href="https://plus.google.com/u/0/109012109664932889712?rel=author" itemprop="author">Roman Dmytrenko</a>
     </div>
   </div>
-</footer
+</footer>
+
+
+{% if site.serving != true %}
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1763671-1', 'auto');  // Replace with your property ID.
+ga('send', 'pageview');
+
+</script>
+{% endif %}
