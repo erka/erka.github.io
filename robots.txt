@@ -1,1 +1,3 @@
 User-agent: *
+Allow: /
+Sitemap: http://erka.github.io/sitemap.xml
