@@ -4,9 +4,14 @@ layout: default
 <div class="post container">
 <div class="row">
   <article class="s12">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta badge">{{ page.date | date: "%b %-d, %Y" }}</p>
-    {{ content }}
+    <h1 itemprop="name">{{ page.title }}</h1>
+    <p class="post-meta badge" itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%b %-d, %Y" }}</p>
+    <meta content="{{ page.thumbnail }}" itemprop="thumbnailUrl">
+    <meta content="{{ page.url | prepend: site.url }}" itemprop="url">
+    <meta content="https://plus.google.com/u/0/109012109664932889712?rel=author" itemprop="author">
+    <div itemprop="articleBody">
+      {{ content }}
+    </div>
   </article>
   {% if page.previous %}
     <a class="btn waves-effect waves-light left orange accent-2"  rel="next" href="{{ page.previous.url }}">
