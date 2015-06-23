@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post container">
 <div class="row">
-  <article class="s12">
+  <article class="s12" itemscope itemtype="http://schema.org/BlogPosting">
     <h1 itemprop="name">{{ page.title }}</h1>
     <p class="post-meta badge" itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%b %-d, %Y" }}</p>
     <meta content="{{ page.thumbnail }}" itemprop="thumbnailUrl">
