@@ -8,6 +8,7 @@ url: "http://erka.github.io" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
+ga_id: UA-1763671-2
 # Build settings
 markdown: kramdown
 
