@@ -1,15 +1,22 @@
 <footer class="page-footer teal">
   <div class="container">
     <div class="row">
-      <div class="col l6 s12">
+      <div class="col l4 s12">
         <h5 class="white-text">About Me</h5>
         <p class="grey-text text-lighten-4">{{site.description}}</p>
       </div>
-      <div class="col l4 offset-l2 s12">
+      <div class="col l6 offset-l2 s12">
         <h5 class="white-text">Links</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a></li>
-          <li><a class="grey-text text-lighten-3" href="/archive.html">Archives</a></li>
+
+          {% if page.next %}
+          <li><a class="grey-text text-lighten-3" rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></li>
+          {% endif %}
+          {% if page.previous %}
+          <li><a class="grey-text text-lighten-3" rel="next" href="{{ page.previous.url }}">{{ page.previous.title }}</a></li>
+          {% endif %}
+          <li><a class="grey-text text-lighten-3" href="/archive.html">Архив</a></li>
+          <li><a class="grey-text text-lighten-3" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
         </ul>
       </div>
     </div>

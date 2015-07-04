@@ -3,8 +3,8 @@ layout: post
 title: "Golden Gate Bridge"
 keywords: "Golden Gate Bridge Marshal Beach San Francisco California"
 description: "Воспоминания о мосте Золотые Ворота"
-lang: ru
 thumbnail: http://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/12626325/e27e095f6ee7a5166b08c8a91fa0b69d5686cb5b/4.jpg
+tags: usa
 ---
 
 div(photo). !http://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/12626325/e27e095f6ee7a5166b08c8a91fa0b69d5686cb5b/5.jpg(Golden Gate Bridge)!

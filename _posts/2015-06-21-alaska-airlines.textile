@@ -4,6 +4,7 @@ title: "Alaska Airlines"
 keywords: "USA Airlines"
 description: "Необычный перелет на самолёте Alaska Airlines"
 thumbnail: https://c2.staticflickr.com/8/7220/7278087226_92d131baef_b.jpg
+tags: usa
 ---
 
 div(photo). !https://c2.staticflickr.com/8/7220/7278087226_92d131baef_b.jpg(Alaska Airlines)!
