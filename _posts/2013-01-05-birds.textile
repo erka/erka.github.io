@@ -3,7 +3,7 @@ layout: post
 title: "О птицах"
 keywords: "птицы"
 description: "Рассказ о птицах, которых мне удалось увидеть и сфотографировать в жизни"
-lang: ru
+series: birds
 thumbnail: /images/birds/rdmytrenko-Mallard.jpg
 ---
 

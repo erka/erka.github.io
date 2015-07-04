@@ -8,11 +8,17 @@
       <div class="col l6 offset-l2 s12">
         <h5 class="white-text">Links</h5>
         <ul>
-
-          {% if page.next %}
+          {% if page.series %}
+          {% for seriesPost in site.posts %}
+            {% if seriesPost.series == page.series and seriesPost.id != page.id %}
+              <li><a class="grey-text text-lighten-3" rel="next" href="{{ seriesPost.url }}">{{ seriesPost.title }}</a></li >
+            {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% if page.next and page.next.series != page.series %}
           <li><a class="grey-text text-lighten-3" rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></li>
           {% endif %}
-          {% if page.previous %}
+          {% if page.previous and page.previous.series != page.series %}
           <li><a class="grey-text text-lighten-3" rel="next" href="{{ page.previous.url }}">{{ page.previous.title }}</a></li>
           {% endif %}
           <li><a class="grey-text text-lighten-3" href="/archive.html">Архив</a></li>

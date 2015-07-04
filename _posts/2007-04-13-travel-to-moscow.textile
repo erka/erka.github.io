@@ -4,7 +4,7 @@ title: Travel to Moscow
 description: "О Москве"
 lang: ru
 thumbnail: https://farm4.staticflickr.com/3593/3631504809_47e7561845_n.jpg
-tags: Москва
+series: Москва
 ---
 
 div(photo). !{{site.baseurl}}https://farm4.staticflickr.com/3593/3631504809_47e7561845_b.jpg(Москва)!
