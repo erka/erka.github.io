@@ -3,11 +3,10 @@ layout: post
 title: "Golden Gate Bridge"
 keywords: "Golden Gate Bridge Marshal Beach San Francisco California"
 description: "Воспоминания о мосте Золотые Ворота"
-thumbnail: http://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/12626325/e27e095f6ee7a5166b08c8a91fa0b69d5686cb5b/4.jpg
+thumbnail: https://c1.staticflickr.com/9/8498/8334428441_82b151efd7_o.jpg
 series: usa
 ---
-
-div(photo). !http://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/12626325/e27e095f6ee7a5166b08c8a91fa0b69d5686cb5b/5.jpg(Golden Gate Bridge)!
+div(photo). !https://c1.staticflickr.com/9/8498/8334428441_82b151efd7_o.jpg(Golden Gate Bridge)!
 %Мост Золотые Ворота%
 
 Это была последняя суббота моей поездки в Сан Франциско. Я пробыл здесь уже несколько недель и, наверно, это было самое холодное лето в моей жизни. С трудом верится, что люди могут привыкнуть к таким погодным условиям, но они живут здесь. Я уже и сам вроде как привык к этой погоде, но пора собираться домой. Я решил прогуляться и посмотреть на Golden Gate Bridge, Pacific Ocean и Marshall Beach. Пожалуй, Marshall Beach одно из лучших мест, где можно посмотреть на мост и послушать прибой волн Тихого океана.
