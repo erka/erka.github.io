@@ -54,19 +54,24 @@ nav .brand-logo {
 }
 
 
-.photo {
-  text-align: center;
-  color: lighten($grey-color, 20%);
-  margin-bottom: 0.7em;
-  span {
-    font-size: 0.7em;
-    font-style: italic;
-  }
+article {
+
   img {
     @extend .z-depth-1;
     max-width: 100%;
     max-height: 75%;
+    margin: auto;
+    display: block;
   }
+  img + em {
+    color: lighten($grey-color, 20%);
+    margin-bottom: 0.7em;  
+    font-size: 0.7em;
+    font-style: italic;
+    display: block;
+    text-align: center;
+  }
+
 }
 i.postedat {
   color: $grey-color;
