@@ -2,11 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col l4 s12">
-        <h5 class="white-text">About Me</h5>
         <p class="grey-text text-lighten-4">{{site.description}}</p>
       </div>
       <div class="col l6 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
         <ul>
           {% if page.series %}
           {% for seriesPost in site.posts %}
@@ -21,7 +19,6 @@
           {% if page.previous and page.previous.series != page.series %}
           <li><a class="grey-text text-lighten-3" rel="next" href="{{ page.previous.url }}">{{ page.previous.title }}</a></li>
           {% endif %}
-          <li><a class="grey-text text-lighten-3" href="/archive.html">Архив</a></li>
           <li><a class="grey-text text-lighten-3" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
         </ul>
       </div>

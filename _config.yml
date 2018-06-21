@@ -1,6 +1,5 @@
 # Site settings
 title: Erka travels
-email: erka@kpumuk.info
 description: > # this means to ignore newlines until "baseurl:"
   Блог о моих путешествия или всём, что связано с ними.
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -12,5 +11,5 @@ ga_id: UA-1763671-2
 # Build settings
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-sitemap
