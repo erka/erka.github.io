@@ -1,0 +1,23 @@
+{{ define "head" }}
+<link rel="stylesheet" href='{{ "css/list.css" | absURL }}' />
+{{ end }} {{ define "main" }}
+<main class="archive">
+  {{ $pages := where .Data.Pages "Type" "blog" }} {{ range $pages.GroupByDate
+  "2006-01" }}
+  <div class="post-group">
+    <h2>{{ dateFormat "2006" (printf "%s-01" .Key) }}</h2>
+    <ul>
+      {{ range .Pages }}
+      <li>
+        <a class="link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <time>{{ .Date | time.Format .Site.Params.dateShortFormat }}</time>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  <div class="post-group">
+    <h2>...</h2>
+  </div>
+</main>
+{{ end }}

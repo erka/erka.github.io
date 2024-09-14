@@ -1,0 +1,6 @@
+name = "fowery"
+license = "MIT"
+description = "A minimal hugo theme for personal blogging"
+tags = ["blog", "clean", "latex", "light", "minimal", "responsive", "simple"]
+features = ["blog"]
+min_version = "0.60"

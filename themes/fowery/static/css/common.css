@@ -1,0 +1,290 @@
+/* global */
+:root {
+  --background: #fff;
+  --background-secondary: #eaeaea;
+  --header: #fafafa;
+  --color: #222;
+  --color-secondary: #999;
+  --border-color: #dcdcdc;
+  --phoneWidth: (max-width: 684px);
+  --tabletWidth: (max-width: 900px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #292a2d;
+    --background-secondary: #3b3d42;
+    --header: #252627;
+    --color: #a9a9b3;
+    --color-secondary: #73747b;
+    --border-color: #4a4b50;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+time {
+  margin-left: 1rem;
+  min-width: 5rem;
+}
+
+body {
+  color: #222;
+  color: var(--color);
+  background-color: #fff;
+  background-color: var(--background);
+  font-size: 1rem;
+  line-height: 1.54;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-wrap: break-word;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.paginator {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+/* header */
+
+header {
+  background: var(--header);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+header > a:first-child {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  #header > h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* main */
+
+main {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 768px;
+  padding: 2rem 0;
+  width: calc(100% - 2rem);
+}
+
+/* footer */
+
+footer {
+  align-items: center;
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+
+footer > .footnote {
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 0.8rem;
+}
+
+.post-group li a {
+  font-size: 1.1rem;
+}
+
+.content {
+  font-size: 1.1rem;
+}
+
+.content :last-child {
+  margin-bottom: 0;
+}
+
+.content a {
+  text-decoration: underline;
+}
+
+.content a.footnote-ref::before {
+  content: "[";
+}
+
+.content a.footnote-ref::after {
+  content: "]";
+}
+
+.content blockquote,
+.content div,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content p,
+.content pre,
+.content ol,
+.content table,
+.content ul {
+  margin-bottom: 1rem;
+}
+
+.content blockquote {
+  border-left: var(--border-color) 2px solid;
+  font-style: italic;
+  padding: 1rem 0 1rem 2rem;
+}
+
+.content code {
+  background-color: #f5f5f5;
+  border-radius: 0.2rem;
+  color: #aa0000;
+  font-family: "Latin Modern Mono", Courier, monospace;
+  padding: 0 0.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  line-height: 1.5;
+}
+
+.content h1 {
+  font-size: 2.4rem;
+  padding: 0 0 2rem;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+}
+
+.content h3 {
+  font-size: 1.4rem;
+  padding-top: 1.2rem;
+}
+
+.content h3:first-of-type {
+  padding-top: 0;
+}
+
+.content h4 {
+  font-size: 1.2rem;
+}
+
+.content h5 {
+  font-size: 1.1rem;
+}
+
+.content h6 {
+  font-size: 1rem;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content p {
+  text-align: justify;
+}
+
+.content pre {
+  background-color: #f5f5f5 !important;
+  border-radius: 0.2rem;
+  font-family: monospace;
+  margin-top: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.content pre code {
+  padding: 0;
+}
+
+.content strong.chinese {
+  font-weight: normal;
+  text-emphasis-style: dot;
+  text-emphasis-position: under;
+  -webkit-text-emphasis-style: dot;
+  -webkit-text-emphasis-position: under;
+}
+
+.content table {
+  display: block;
+  overflow-x: auto;
+}
+
+.content td,
+.content th {
+  border: #575c61 1px solid;
+  padding: 0.1rem 0.5rem;
+}
+
+.content th {
+  background-color: #575c61;
+  color: #fafafa;
+}
+
+.content ol,
+.content ul {
+  margin-left: 1.5rem;
+}
+
+.post h1,
+.post h4 {
+  text-align: center;
+}
+
+.post h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.post .aside {
+  margin: 1.2rem auto;
+}
+
+.post .aside em {
+  text-align: center;
+  display: block;
+  font-size: 0.8rem;
+}
