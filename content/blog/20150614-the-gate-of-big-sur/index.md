@@ -6,7 +6,7 @@ date = 2015-06-14
 tags = ['travel']
 +++
 
-{{< figure src="gate-at-big-sur.jpg" alt="cover image"  title="Golden Gate Bridge" class="aside" >}}
+{{< figure src="gate-at-big-sur.jpg" alt="cover image"  title="The Gate of Big Sur" class="aside" >}}
 
 The Gate of Big Sur is one of the most captivating entrances to California’s stunning coastline. This winding stretch of Highway 1, hugging the cliffs between the Pacific Ocean and the rugged mountains, feels like the gateway to another world. The landscape here, with its towering redwoods, wildflowers, and crashing waves, has weathered time, fires, and storms. It’s a place where nature’s power and beauty truly converge.
 

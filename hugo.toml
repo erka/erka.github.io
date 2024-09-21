@@ -10,7 +10,7 @@ name = 'Roman Dmytrenko'
 [params]
 description = 'Exploring the art of storytelling, one foot at a time.'
 keywords = ['life', 'software', 'engineering', 'travel']
-favicon = 'favicon.ico'
+favicon = 'favicon'
 dateShortFormat = 'Jan 02'
 
 

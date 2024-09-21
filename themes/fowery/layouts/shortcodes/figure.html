@@ -1,8 +1,5 @@
 
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-    {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
-    {{- end -}}
     {{- $image := $.Page.Resources.Get (.Get "src") -}}
     {{- if ne $image.MediaType.SubType "svg" -}}
       {{- $image = $image.Resize (printf "%dx%d webp" $image.Width $image.Height) -}}
@@ -12,10 +9,11 @@
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+        {{- if ne $image.MediaType.SubType "svg" -}}
+          width="{{ $image.Width }}"
+          height="{{ $image.Height }}"
+        {{- end -}}
     /><!-- Closing img tag -->
-    {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
             {{ with (.Get "title") -}}

@@ -18,7 +18,12 @@
     {{ end }}
 
     <!-- favicon -->
-    <link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />
+    <link rel="alternate icon" href="{{ .Site.Params.favicon | absURL }}.ico" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ .Site.Params.favicon | absURL }}.svg"
+    />
 
     <!-- keywords -->
     {{ if .Keywords }}
