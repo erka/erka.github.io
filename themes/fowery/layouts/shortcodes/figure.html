@@ -1,8 +1,10 @@
 
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- $image := $.Page.Resources.Get (.Get "src") -}}
+    {{- $large := $image -}}
     {{- if ne $image.MediaType.SubType "svg" -}}
-      {{- $image = $image.Resize (printf "%dx%d webp" $image.Width $image.Height) -}}
+      {{- $large = $image.Resize "1536x webp q85" -}}
+      {{- $image = $image.Resize "768x webp q95" -}}
     {{- end -}}
 
     <img src="{{ $image.RelPermalink }}"
@@ -10,6 +12,7 @@
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
         {{- if ne $image.MediaType.SubType "svg" -}}
+          srcset="{{ $image.RelPermalink }} 1x, {{ $large.RelPermalink }} 2x"
           width="{{ $image.Width }}"
           height="{{ $image.Height }}"
         {{- end -}}
