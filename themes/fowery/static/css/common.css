@@ -44,6 +44,9 @@ body {
   background-color: var(--background);
   font-size: 1rem;
   line-height: 1.54;
+  font-family: sans-serif;
+  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+  text-rendering: optimizeLegibility;
 }
 
 #wrapper {
@@ -120,10 +123,6 @@ footer > .footnote {
   font-size: 1.1rem;
 }
 
-.content {
-  font-size: 1.1rem;
-}
-
 .content :last-child {
   margin-bottom: 0;
 }
@@ -176,7 +175,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .content h1,
@@ -284,8 +283,13 @@ h6 {
   margin: 1.2rem auto;
 }
 
+.post aside em,
 .post .aside em {
   text-align: center;
   display: block;
   font-size: 0.8rem;
+}
+
+.post aside em {
+  text-align: right;
 }

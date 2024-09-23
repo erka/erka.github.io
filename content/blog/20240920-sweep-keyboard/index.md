@@ -3,6 +3,7 @@ title = 'The Sweep Keyboard'
 slug = 'the-sweep-keyboard'
 description = 'Building the split column-staggered keyboard and improving touch typing'
 date = 2024-09-20
+tags = ['keyboard']
 +++
 
 {{< figure src="cover.jpg" alt="cover image" title="My Sweep keyboard" class="aside" >}}
@@ -41,7 +42,7 @@ I chose ZMK for my keyboard because I wanted it to be wireless. Initially, I tri
 
 ### Conclusion
 
-If I were to start my build today, I'd probably go with a Sweep version without hot-swap sockets. The hot-swap switches feel a bit loose, and it's tricky to remove keycaps without pulling the entire switch. Since I don't plan on experimenting with different switches any time soon, a non-hot-swap version would make for an even simpler build.
+If I start my build today, I'd probably go with a Sweep version without hot-swap sockets. The hot-swap switches feel a bit loose, and it's tricky to remove keycaps without pulling the entire switch. Since I don't plan on experimenting with different switches any time soon, a non-hot-swap version would make for an even simpler build.
 
 The column-staggered layout feels like a better fit for me, and I've seen progress with keys like C, V, and B. I've also managed to break some bad habits, like using the wrong hand for keys in the middle columns. The symbols and numbers are still a bit of a puzzle, but the sticky layer switcher has been surprisingly easy to pick up.
 

@@ -28,6 +28,18 @@
     {{ else }}
     {{ .Content }}
     {{ end }}
+    <aside>
+     <em>
+      published on {{.Date | time.Format "Jan 02, 2006"}}&nbsp;
+      {{- with .Params.tags -}}
+        {{- if ge (len .) 1 -}}
+            {{- range . -}}
+                <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{ . }}</a>
+            {{ end -}}
+        {{- end -}}
+      {{- end -}}
+    </em>
+    </aside>
   </article>
   <div class="paginator">
     {{ if .PrevInSection }}
