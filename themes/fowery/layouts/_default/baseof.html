@@ -2,7 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- author -->
@@ -18,20 +21,9 @@
     {{ end }}
 
     <!-- favicon -->
-    <link
-      rel="alternate icon"
-      href="{{ .Site.Params.favicon | absURL }}.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="{{ .Site.Params.favicon | absURL }}.svg"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="{{ .Site.Params.favicon | absURL }}.png"
-    />
+    <link rel="alternate icon" href="{{ .Site.Params.favicon | absURL }}.png" />
+    <link rel="icon" href="{{ .Site.Params.favicon | absURL }}.svg" />
+    <link rel="apple-touch-icon" href="{{ `apple-touch-icon.png` | absURL }}" />
 
     <!-- keywords -->
     {{ if .Keywords }}
