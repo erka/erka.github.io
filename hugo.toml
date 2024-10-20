@@ -16,3 +16,6 @@ dateShortFormat = 'Jan 02'
 
 [permalinks]
 posts = "/blog/:slug"
+
+[markup.highlight]
+style = "catppuccin-frappe"
