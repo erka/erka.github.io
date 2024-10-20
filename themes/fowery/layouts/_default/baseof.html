@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- author -->
-    <meta name="author" content="{{ .Site.Author.name }}" />
+    <meta name="author" content="{{ .Site.Params.Author.name }}" />
 
     <!-- description -->
     {{ if .Description }}
@@ -18,11 +18,19 @@
     {{ end }}
 
     <!-- favicon -->
-    <link rel="alternate icon" href="{{ .Site.Params.favicon | absURL }}.ico" />
+    <link
+      rel="alternate icon"
+      href="{{ .Site.Params.favicon | absURL }}.png"
+      type="image/x-icon"
+    />
     <link
       rel="icon"
       type="image/svg+xml"
       href="{{ .Site.Params.favicon | absURL }}.svg"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{{ .Site.Params.favicon | absURL }}.png"
     />
 
     <!-- keywords -->

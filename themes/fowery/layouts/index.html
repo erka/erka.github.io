@@ -3,9 +3,9 @@
 {{ end }} {{ define "main" }}
 <main class="archive">
   {{ $pages := where .Site.RegularPages "Type" "==" "blog" }} {{ range
-  $pages.GroupByDate "2006-01" }}
+  $pages.GroupByDate "2006" }}
   <div class="post-group">
-    <h2>{{ dateFormat "2006" (printf "%s-01" .Key) }}</h2>
+    <h2>{{ dateFormat "2006" (printf "%s-01-02" .Key) }}</h2>
     <ul>
       {{ range .Pages }}
       <li>
