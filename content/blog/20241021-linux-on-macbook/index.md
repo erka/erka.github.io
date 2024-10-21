@@ -64,8 +64,8 @@ update-initramfs -v -c -k all
 I also added `sdhci.debug_quirks2=0x4` to the grub and run `update-grub`. Time to reboot... And it worked half of the times and the external card reader helped to boot. I am still looking around for the permanent solution for it.
 
 > [!TIP]
-> The live stick has extra volumes which is available for write. I suggests to mount it and copy b43 drivers to it.
-> You will not have to use Ethernet interface between the restarts in the future.
+> The live stick has extra volumes which is available for write. I suggests to mount one of them and
+> copy b43 drivers there. You will not have to use Ethernet interface between the restarts in the future.
 
 After a bit of setup my old laptop could run latest version of apps which I missed on the mac OS X 10.13. I never used tilling before and it seams a great feature. Snap is a great way to install some apps like Slack. Audio is working out of the box. The trackpad and keyboard don't require extra drivers and you can change volume and brightness. The same about mic and camera.
 

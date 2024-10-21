@@ -19,3 +19,6 @@ posts = "/blog/:slug"
 
 [markup.highlight]
 style = "catppuccin-frappe"
+
+[markup.goldmark.parser.attribute]
+block = true

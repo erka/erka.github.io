@@ -7,6 +7,7 @@
   --color-secondary: #999;
   --color-accent: #e64553;
   --border-color: #dcdcdc;
+  --color-tip: #40a02b;
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
 }
@@ -20,6 +21,7 @@
     --color-secondary: #73747b;
     --color-accent: #ee99a0;
     --border-color: #4a4b50;
+    --color-tip: #a6d189;
   }
 }
 
@@ -158,9 +160,25 @@ footer > .footnote {
 }
 
 .content blockquote {
-  border-left: var(--border-color) 2px solid;
+  border-left: var(--border-color) 4px solid;
   font-style: italic;
-  padding: 1rem 0 1rem 2rem;
+  padding: 1rem 0 1rem 1.2rem;
+}
+
+.content blockquote.alert {
+  padding: 0 0 0.2rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.content blockquote.alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.content blockquote.alert p.alert-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-tip);
+  margin-bottom: 0.4rem;
 }
 
 .content code {
