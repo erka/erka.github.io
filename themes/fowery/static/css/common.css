@@ -10,6 +10,13 @@
   --color-tip: #40a02b;
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,9 +55,6 @@ body {
   background-color: var(--background);
   font-size: 1rem;
   line-height: 1.54;
-  font-family: sans-serif;
-  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
-  text-rendering: optimizeLegibility;
 }
 
 #wrapper {
