@@ -1,13 +1,17 @@
 /* global */
 :root {
-  --background: #fff;
-  --background-secondary: #eaeaea;
-  --header: #fafafa;
-  --color: #222;
-  --color-secondary: #999;
-  --color-accent: #e64553;
-  --border-color: #dcdcdc;
-  --color-tip: #40a02b;
+  --background: rgb(242, 244, 248);
+  --background-secondary: rgb(236, 239, 244);
+  --header: rgb(236, 239, 244);
+  --color: rgb(76, 86, 106);
+  --color-secondary: rgb(76, 86, 106);
+  --color-accent: rgb(94, 129, 172);
+  --border-color: rgba(94, 129, 172, 0.6);
+  --color-tip: rgb(163, 190, 140);
+  --color-info: rgb(180, 142, 173);
+  --color-warning: rgb(208, 135, 112);
+  --color-danger: rgb(191, 97, 106);
+
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
 
@@ -21,14 +25,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #292a2d;
-    --background-secondary: #3b3d42;
-    --header: #252627;
-    --color: #a9a9b3;
-    --color-secondary: #73747b;
-    --color-accent: #ee99a0;
-    --border-color: #4a4b50;
-    --color-tip: #a6d189;
+    --background: rgb(46, 52, 64);
+    --background-secondary: rgb(59, 66, 82);
+    --header: rgb(36, 41, 51);
+    --color: rgb(236, 239, 244);
+    --color-secondary: rgb(171, 185, 207);
+    --color-accent: rgb(136, 192, 208);
+    --border-color: rgba(136, 192, 208, 0.6);
     color-scheme: dark;
   }
 }
@@ -37,11 +40,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 100%;
 }
 
 a {
-  color: inherit;
+  color: var(--color-accent);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 time {
@@ -55,7 +63,8 @@ body {
   background-color: #fff;
   background-color: var(--background);
   font-size: 1rem;
-  line-height: 1.54;
+  line-height: 1.6;
+  font-weight 300;
 }
 
 #wrapper {
@@ -63,10 +72,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-wrap: break-word;
-}
-
-.link {
-  text-decoration: underline;
 }
 
 .paginator {
@@ -92,6 +97,11 @@ header > a:first-child {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
+  color: inherit;
+}
+
+header > a:first-child:hover {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -129,15 +139,12 @@ footer > .footnote {
 }
 
 .post-group li a {
+  color: inherit;
   font-size: 1.1rem;
 }
 
 .content :last-child {
   margin-bottom: 0;
-}
-
-.content a {
-  text-decoration: underline;
 }
 
 .content a.footnote-ref::before {
@@ -168,6 +175,7 @@ footer > .footnote {
   border-left: var(--border-color) 4px solid;
   font-style: italic;
   padding: 1rem 0 1rem 1.2rem;
+  border-radius: 0.2rem;
 }
 
 .content blockquote.alert {
@@ -175,21 +183,48 @@ footer > .footnote {
   font-size: 0.9rem;
 }
 
+.content blockquote.alert p.alert-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
 .content blockquote.alert-tip {
   border-left-color: var(--color-tip);
 }
 
-.content blockquote.alert p.alert-heading {
-  font-weight: bold;
-  text-transform: uppercase;
+.content blockquote.alert-tip p.alert-heading {
   color: var(--color-tip);
-  margin-bottom: 0.4rem;
+}
+
+.content blockquote.alert-note {
+  border-left-color: var(--color-info);
+}
+
+.content blockquote.alert-note p.alert-heading {
+  color: var(--color-info);
+}
+
+.content blockquote.alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.content blockquote.alert-warning p.alert-heading {
+  color: var(--color-warning);
+}
+
+.content blockquote.alert-danger {
+  border-left-color: var(--color-danger);
+}
+
+.content blockquote.alert-danger p.alert-heading {
+  color: var(--color-danger);
 }
 
 .content code {
   background-color: var(--background-secondary);
   border-radius: 0.2rem;
-  color: var(--color-accent);
+  color: var(--color-secondary);
   font-family: "Latin Modern Mono", Courier, monospace;
   padding: 0 0.2rem;
 }
@@ -257,8 +292,12 @@ h6 {
   font-family: monospace;
   margin-top: 0.5rem;
   overflow-x: auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
   font-size: 0.8rem;
+}
+
+.content pre {
+  border-left: var(--border-color) 4px solid;
 }
 
 .content code {
@@ -268,6 +307,7 @@ h6 {
 
 .content pre code {
   padding: 0;
+  margin: 0;
 }
 
 .content strong.chinese {

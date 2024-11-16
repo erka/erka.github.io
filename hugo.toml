@@ -18,7 +18,8 @@ dateShortFormat = 'Jan 02'
 posts = "/blog/:slug"
 
 [markup.highlight]
-style = "catppuccin-frappe"
+style = "nord"
+
 
 [markup.goldmark.parser.attribute]
 block = true
