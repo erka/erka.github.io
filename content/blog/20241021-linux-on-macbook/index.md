@@ -76,3 +76,7 @@ I believe that with better preparation for each distribution, I can successfully
 Is Linux better than macOS? Personally, I don’t think so. In my view, Apple creates the best hardware for laptops and offers an exceptional UI/UX experience. I appreciate not having to deal with drivers and fonts. It would be fantastic if Linux could reach the same level of maturity as macOS, but there’s still a lot of work to be done.
 
 But Linux is a great for giving these old MacBooks the second life. Taking into account that they could be upgraded with new SSD disks and memory they could run a lot of things for many years. It will require extra setup time but you will learn a lot about Linux. The community will help. Many people share their setups and workarounds. With some patience you will get a nice laptop.
+
+### Update Nov 16, 2024
+
+After some initial play I switched to Debian 13. While it's in testing it performs very well. I like Gnome 47 and other updates. I bought the new SSD disk to stop the drama with micro sd card. I started to notice that a lot of people use Linux at work. I also haven't seen any major issues.
