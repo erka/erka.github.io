@@ -40,7 +40,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+  font-size: clamp(1rem, 0.346vw + 0.91rem, 1.188rem);
+  line-height: clamp(1.544rem, -0.104vw + 1.627rem, 1.6rem);
 }
 
 a {
@@ -67,7 +72,7 @@ body {
   font-weight 300;
 }
 
-#wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -364,3 +369,28 @@ h6 {
 .post aside em {
   text-align: right;
 }
+
+/* list */
+.archive > .post-group > ul {
+  border-left: gray solid 1px;
+  list-style-type: none;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+}
+.archive > .post-group > ul > li {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+}
+.archive > .post-group > ul > li > time {
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  main.archive > .post-group > ul {
+    margin-left: 1rem;
+    padding-left: 2rem;
+  }
+}
+

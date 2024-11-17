@@ -1,6 +1,4 @@
-{{ define "head" }}
-<link rel="stylesheet" href='{{ "css/list.css" | absURL }}' />
-{{ end }} {{ define "main" }}
+{{ define "main" }}
 <main class="archive">
   {{ $pages := where .Site.RegularPages "Type" "==" "blog" }} {{ range
   $pages.GroupByDate "2006" }}
