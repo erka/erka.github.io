@@ -3,7 +3,7 @@
   --background: rgb(242, 244, 248);
   --background-secondary: rgb(236, 239, 244);
   --header: rgb(236, 239, 244);
-  --color: rgb(76, 86, 106);
+  --color: rgb(36, 41, 51);
   --color-secondary: rgb(76, 86, 106);
   --color-accent: rgb(94, 129, 172);
   --border-color: rgba(94, 129, 172, 0.6);
@@ -45,7 +45,7 @@
 html {
   font-size: 16px;
   font-size: clamp(1rem, 0.346vw + 0.91rem, 1.188rem);
-  line-height: clamp(1.544rem, -0.104vw + 1.627rem, 1.6rem);
+  line-height: clamp(1.6rem, 0.196vw + 1.549rem, 1.706rem);
 }
 
 a {
@@ -67,8 +67,6 @@ body {
   color: var(--color);
   background-color: #fff;
   background-color: var(--background);
-  font-size: 1rem;
-  line-height: 1.6;
   font-weight 300;
 }
 
@@ -226,12 +224,13 @@ footer > .footnote {
   color: var(--color-danger);
 }
 
-.content code {
+.content p > code {
   background-color: var(--background-secondary);
   border-radius: 0.2rem;
-  color: var(--color-secondary);
   font-family: "Latin Modern Mono", Courier, monospace;
-  padding: 0 0.2rem;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  color: var(--color-secondary);
 }
 
 h1,
@@ -299,15 +298,11 @@ h6 {
   overflow-x: auto;
   padding: 0.5rem 0.5rem 0.5rem 1.2rem;
   font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .content pre {
   border-left: var(--border-color) 4px solid;
-}
-
-.content code {
-  font-size: 0.8rem;
-  padding: 0.2rem;
 }
 
 .content pre code {
