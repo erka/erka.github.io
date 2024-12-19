@@ -15,12 +15,7 @@
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +27,6 @@
     --color-secondary: rgb(171, 185, 207);
     --color-accent: rgb(136, 192, 208);
     --border-color: rgba(136, 192, 208, 0.6);
-    color-scheme: dark;
   }
 }
 
@@ -46,6 +40,12 @@ html {
   font-size: 16px;
   font-size: clamp(1rem, 0.346vw + 0.91rem, 1.188rem);
   line-height: clamp(1.6rem, 0.196vw + 1.549rem, 1.706rem);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
 }
 
 a {
