@@ -5,7 +5,7 @@
   --header: rgb(236, 239, 244);
   --color: rgb(36, 41, 51);
   --color-secondary: rgb(76, 86, 106);
-  --color-accent: rgb(94, 129, 172);
+  --color-accent: rgb(60, 95, 140);
   --border-color: rgba(94, 129, 172, 0.6);
   --color-tip: rgb(163, 190, 140);
   --color-info: rgb(180, 142, 173);
@@ -20,14 +20,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgb(46, 52, 64);
-    --background-secondary: rgb(59, 66, 82);
-    --header: rgb(36, 41, 51);
-    --color: rgb(236, 239, 244);
-    --color-secondary: rgb(171, 185, 207);
+    --background: rgb(52, 61, 63);
+    --background-secondary: rgb(62, 71, 73);
+    --header: rgb(42, 51, 53);
+    --color: rgb(224, 222, 218);
+    --color-secondary: rgb(165, 163, 158);
     --color-accent: rgb(136, 192, 208);
     --border-color: rgba(136, 192, 208, 0.6);
   }
+  color-scheme: dark;
 }
 
 * {
@@ -37,21 +38,22 @@
 }
 
 html {
-  font-size: 16px;
-  font-size: clamp(1rem, 0.346vw + 0.91rem, 1.188rem);
-  line-height: 1.75;
+  font-size: clamp(1rem, 0.3vw + 0.88rem, 1.05rem);
+  line-height: 1.65;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, sans-serif;
   font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
 }
 
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 a:hover {
@@ -68,7 +70,7 @@ body {
   color: var(--color);
   background-color: #fff;
   background-color: var(--background);
-  font-weight 300;
+  font-weight: 300;
 }
 
 .wrapper {
@@ -136,7 +138,7 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  max-width: 768px;
+  max-width: 48rem;
   padding: 2rem 0;
   width: calc(100% - 2rem);
 }
@@ -193,7 +195,7 @@ footer > .footnote {
 .content ol,
 .content table,
 .content ul {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .content blockquote {
@@ -205,7 +207,7 @@ footer > .footnote {
 
 .content blockquote.alert {
   padding: 0 0 0.2rem 1.2rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .content blockquote.alert p.alert-heading {
@@ -274,20 +276,23 @@ h6 {
 }
 
 .content h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
   padding: 0 0 1.5rem;
   margin-top: 0;
 }
 
 .content h2 {
-  font-size: 1.8rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .content h3 {
-  font-size: 1.4rem;
-  padding-top: 1.2rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.015em;
+  padding-top: 0.8rem;
 }
 
 .content h3:first-of-type {
@@ -295,15 +300,16 @@ h6 {
 }
 
 .content h4 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
 }
 
 .content h5 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .content h6 {
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .content img {
@@ -312,22 +318,24 @@ h6 {
 }
 
 .content p {
-  text-align: justify;
-  max-width: 65ch;
+  max-width: 80ch;
   margin-left: auto;
   margin-right: auto;
+}
+.content p > code {
+  font-size: 0.95rem;
 }
 
 .content pre,
 .content .highlight pre {
   background-color: var(--background-secondary);
   border-radius: 0.2rem;
-  font-family: monospace;
+  font-family: ui-monospace, monospace;
   margin-top: 0.5rem;
   overflow-x: auto;
-  padding: 1rem 1rem 1rem 1.2rem;
-  font-size: 0.85rem;
-  line-height: 1.6;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
 }
 
 .content pre {
@@ -337,14 +345,6 @@ h6 {
 .content pre code {
   padding: 0;
   margin: 0;
-}
-
-.content strong.chinese {
-  font-weight: normal;
-  text-emphasis-style: dot;
-  text-emphasis-position: under;
-  -webkit-text-emphasis-style: dot;
-  -webkit-text-emphasis-position: under;
 }
 
 .content table {
@@ -368,8 +368,7 @@ h6 {
   margin-left: 1.5rem;
 }
 
-.post h1,
-.post h4 {
+.post h1:first-child {
   text-align: center;
 }
 
@@ -434,3 +433,434 @@ h6 {
   margin-top: 0;
 }
 
+.chroma {
+  border-radius: 0.2rem;
+  overflow-x: auto;
+}
+
+@media (prefers-color-scheme: light) {
+  .chroma {
+    color: #24292e;
+    background-color: var(--background-secondary);
+  }
+  .chroma .p {
+    color: #24292e;
+  }
+  .chroma .err {
+    color: #d73a49;
+  }
+  .chroma .hl {
+    background-color: #f6f8fa;
+  }
+  .chroma .lnt {
+    color: #6a737d;
+  }
+  .chroma .ln {
+    color: #6a737d;
+  }
+  .chroma .k {
+    color: #d73a49;
+    font-weight: 600;
+  }
+  .chroma .kc {
+    color: #d73a49;
+    font-weight: 600;
+  }
+  .chroma .kd {
+    color: #d73a49;
+    font-weight: 600;
+  }
+  .chroma .kn {
+    color: #d73a49;
+    font-weight: 600;
+  }
+  .chroma .kp {
+    color: #d73a49;
+  }
+  .chroma .kr {
+    color: #d73a49;
+    font-weight: 600;
+  }
+  .chroma .kt {
+    color: #d73a49;
+  }
+  .chroma .na {
+    color: #6f42c1;
+  }
+  .chroma .nc {
+    color: #6f42c1;
+    font-weight: 600;
+  }
+  .chroma .no {
+    color: #6f42c1;
+  }
+  .chroma .nd {
+    color: #6f42c1;
+  }
+  .chroma .ni {
+    color: #6f42c1;
+  }
+  .chroma .ne {
+    color: #d73a49;
+  }
+  .chroma .nl {
+    color: #6f42c1;
+  }
+  .chroma .nn {
+    color: #6f42c1;
+  }
+  .chroma .py {
+    color: #6f42c1;
+  }
+  .chroma .nt {
+    color: #22863a;
+  }
+  .chroma .nb {
+    color: #6f42c1;
+  }
+  .chroma .bp {
+    color: #6f42c1;
+  }
+  .chroma .nf {
+    color: #6f42c1;
+    font-weight: 600;
+  }
+  .chroma .fm {
+    color: #6f42c1;
+    font-weight: 600;
+  }
+  .chroma .s {
+    color: #22863a;
+  }
+  .chroma .sa {
+    color: #22863a;
+  }
+  .chroma .sb {
+    color: #22863a;
+  }
+  .chroma .sc {
+    color: #22863a;
+  }
+  .chroma .dl {
+    color: #22863a;
+  }
+  .chroma .s2 {
+    color: #22863a;
+  }
+  .chroma .se {
+    color: #e36209;
+  }
+  .chroma .sh {
+    color: #22863a;
+  }
+  .chroma .si {
+    color: #22863a;
+  }
+  .chroma .sx {
+    color: #22863a;
+  }
+  .chroma .sr {
+    color: #e36209;
+  }
+  .chroma .s1 {
+    color: #22863a;
+  }
+  .chroma .ss {
+    color: #22863a;
+  }
+  .chroma .m {
+    color: #005cc5;
+  }
+  .chroma .mb {
+    color: #005cc5;
+  }
+  .chroma .mf {
+    color: #005cc5;
+  }
+  .chroma .mh {
+    color: #005cc5;
+  }
+  .chroma .mi {
+    color: #005cc5;
+  }
+  .chroma .il {
+    color: #005cc5;
+  }
+  .chroma .mo {
+    color: #005cc5;
+  }
+  .chroma .o {
+    color: #d73a49;
+  }
+  .chroma .ow {
+    color: #d73a49;
+    font-weight: 600;
+  }
+  .chroma .c {
+    color: #6a737d;
+    font-style: italic;
+  }
+  .chroma .ch {
+    color: #6a737d;
+    font-style: italic;
+  }
+  .chroma .cm {
+    color: #6a737d;
+    font-style: italic;
+  }
+  .chroma .c1 {
+    color: #6a737d;
+    font-style: italic;
+  }
+  .chroma .cs {
+    color: #6a737d;
+    font-style: italic;
+  }
+  .chroma .cp {
+    color: #6a737d;
+    font-style: italic;
+  }
+  .chroma .cpf {
+    color: #6a737d;
+    font-style: italic;
+  }
+  .chroma .gd {
+    color: #d73a49;
+  }
+  .chroma .ge {
+    font-style: italic;
+  }
+  .chroma .gr {
+    color: #d73a49;
+  }
+  .chroma .gh {
+    color: #005cc5;
+    font-weight: 600;
+  }
+  .chroma .gi {
+    color: #22863a;
+  }
+  .chroma .gp {
+    color: #6a737d;
+    font-weight: 600;
+  }
+  .chroma .gs {
+    font-weight: 600;
+  }
+  .chroma .gu {
+    color: #005cc5;
+    font-weight: 600;
+  }
+  .chroma .gt {
+    color: #d73a49;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .chroma {
+    color: #f8f8f2;
+    background-color: var(--background-secondary);
+  }
+  .chroma .p {
+    color: #f8f8f2;
+  }
+  .chroma .err {
+    color: #ff5555;
+  }
+  .chroma .hl {
+    background-color: #424853;
+  }
+  .chroma .lnt {
+    color: #6272a4;
+  }
+  .chroma .ln {
+    color: #6272a4;
+  }
+  .chroma .k {
+    color: #ff79c6;
+  }
+  .chroma .kc {
+    color: #ff79c6;
+  }
+  .chroma .kd {
+    color: #ff79c6;
+  }
+  .chroma .kn {
+    color: #ff79c6;
+  }
+  .chroma .kp {
+    color: #ff79c6;
+  }
+  .chroma .kr {
+    color: #ff79c6;
+  }
+  .chroma .kt {
+    color: #ff79c6;
+  }
+  .chroma .na {
+    color: #8be9fd;
+  }
+  .chroma .nc {
+    color: #8be9fd;
+  }
+  .chroma .no {
+    color: #8be9fd;
+  }
+  .chroma .nd {
+    color: #8be9fd;
+  }
+  .chroma .ni {
+    color: #8be9fd;
+  }
+  .chroma .ne {
+    color: #ff5555;
+  }
+  .chroma .nl {
+    color: #8be9fd;
+  }
+  .chroma .nn {
+    color: #8be9fd;
+  }
+  .chroma .py {
+    color: #8be9fd;
+  }
+  .chroma .nt {
+    color: #50fa7b;
+  }
+  .chroma .nb {
+    color: #50fa7b;
+  }
+  .chroma .bp {
+    color: #50fa7b;
+  }
+  .chroma .nf {
+    color: #50fa7b;
+  }
+  .chroma .fm {
+    color: #50fa7b;
+  }
+  .chroma .s {
+    color: #f1fa8c;
+  }
+  .chroma .sa {
+    color: #f1fa8c;
+  }
+  .chroma .sb {
+    color: #f1fa8c;
+  }
+  .chroma .sc {
+    color: #f1fa8c;
+  }
+  .chroma .dl {
+    color: #f1fa8c;
+  }
+  .chroma .s2 {
+    color: #f1fa8c;
+  }
+  .chroma .se {
+    color: #ffb86c;
+  }
+  .chroma .sh {
+    color: #f1fa8c;
+  }
+  .chroma .si {
+    color: #f1fa8c;
+  }
+  .chroma .sx {
+    color: #f1fa8c;
+  }
+  .chroma .sr {
+    color: #ffb86c;
+  }
+  .chroma .s1 {
+    color: #f1fa8c;
+  }
+  .chroma .ss {
+    color: #f1fa8c;
+  }
+  .chroma .m {
+    color: #bd93f9;
+  }
+  .chroma .mb {
+    color: #bd93f9;
+  }
+  .chroma .mf {
+    color: #bd93f9;
+  }
+  .chroma .mh {
+    color: #bd93f9;
+  }
+  .chroma .mi {
+    color: #bd93f9;
+  }
+  .chroma .il {
+    color: #bd93f9;
+  }
+  .chroma .mo {
+    color: #bd93f9;
+  }
+  .chroma .o {
+    color: #ff79c6;
+  }
+  .chroma .ow {
+    color: #ff79c6;
+  }
+  .chroma .c {
+    color: #6272a4;
+    font-style: italic;
+  }
+  .chroma .ch {
+    color: #6272a4;
+    font-style: italic;
+  }
+  .chroma .cm {
+    color: #6272a4;
+    font-style: italic;
+  }
+  .chroma .c1 {
+    color: #6272a4;
+    font-style: italic;
+  }
+  .chroma .cs {
+    color: #6272a4;
+    font-style: italic;
+  }
+  .chroma .cp {
+    color: #6272a4;
+    font-style: italic;
+  }
+  .chroma .cpf {
+    color: #6272a4;
+    font-style: italic;
+  }
+  .chroma .gd {
+    color: #ff5555;
+  }
+  .chroma .ge {
+    font-style: italic;
+  }
+  .chroma .gr {
+    color: #ff5555;
+  }
+  .chroma .gh {
+    color: #bd93f9;
+    font-weight: 600;
+  }
+  .chroma .gi {
+    color: #50fa7b;
+  }
+  .chroma .gp {
+    color: #6272a4;
+    font-weight: 600;
+  }
+  .chroma .gs {
+    font-weight: 600;
+  }
+  .chroma .gu {
+    color: #bd93f9;
+    font-weight: 600;
+  }
+  .chroma .gt {
+    color: #ff5555;
+  }
+}

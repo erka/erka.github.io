@@ -19,6 +19,7 @@ posts = "/blog/:slug"
 
 [markup.highlight]
 style = "nord"
+noClasses = false
 
 
 [markup.goldmark.parser.attribute]

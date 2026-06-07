@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 430" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+  <defs>
+    <style>
+      .bg { fill: transparent; }
+      .lifeline { stroke: #D8DEE9; stroke-width: 1; stroke-dasharray: 4,4; }
+      .header-bg { fill: #E5E9F0; stroke: #D8DEE9; stroke-width: 1; }
+      .header-text { fill: #4C566A; font-weight: 600; }
+      .arrow-req { stroke: #5B81AC; stroke-width: 1.5; fill: none; }
+      .arrow-req-head { fill: #5B81AC; }
+      .arrow-event { stroke: #81A1C1; stroke-width: 1.5; stroke-dasharray: 6,3; fill: none; }
+      .arrow-event-head { fill: #81A1C1; }
+      .arrow-hot { stroke: #BF616A; stroke-width: 2; stroke-dasharray: 6,3; fill: none; }
+      .arrow-hot-head { fill: #BF616A; }
+      .label-req { fill: #5B81AC; font-weight: 500; }
+      .label-sse { fill: #81A1C1; font-weight: 500; }
+      .label-hot { fill: #BF616A; font-weight: 600; }
+      .label-sub { fill: #81A1C1; font-size: 12px; font-style: italic; }
+      .label-opt { fill: #D08770; font-size: 12px; font-style: italic; }
+      .legend-text { fill: #4C566A; font-size: 11px; }
+      .divider { stroke: #D8DEE9; stroke-width: 1; }
+      .box { fill: #D8EAF8; stroke: #5B81AC; stroke-width: 1; rx: 4; }
+      .box-text { fill: #4C566A; font-size: 11px; }
+      @media (prefers-color-scheme: dark) {
+        .lifeline { stroke: #434C5E; }
+        .header-bg { fill: #3B4252; stroke: #434C5E; }
+        .header-text { fill: #D8DEE9; }
+        .arrow-req { stroke: #88C0D0; }
+        .arrow-req-head { fill: #88C0D0; }
+        .arrow-event { stroke: #81A1C1; }
+        .arrow-event-head { fill: #81A1C1; }
+        .arrow-hot { stroke: #BF616A; }
+        .arrow-hot-head { fill: #BF616A; }
+        .label-req { fill: #88C0D0; }
+        .label-sse { fill: #81A1C1; }
+        .label-hot { fill: #BF616A; }
+        .label-sub { fill: #81A1C1; }
+        .label-opt { fill: #D08770; }
+        .legend-text { fill: #D8DEE9; }
+        .divider { stroke: #434C5E; }
+        .box { fill: #2E3B45; stroke: #88C0D0; }
+        .box-text { fill: #D8DEE9; }
+      }
+    </style>
+    <marker id="arrowReq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" class="arrow-req-head"/>
+    </marker>
+    <marker id="arrowSse" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" class="arrow-event-head"/>
+    </marker>
+    <marker id="arrowHot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" class="arrow-hot-head"/>
+    </marker>
+  </defs>
+
+  <rect width="840" height="430" class="bg"/>
+
+  <rect x="50" y="20" width="160" height="28" rx="6" class="header-bg"/>
+  <text x="130" y="38" text-anchor="middle" class="header-text">Client</text>
+
+  <rect x="340" y="20" width="160" height="28" rx="6" class="header-bg"/>
+  <text x="420" y="38" text-anchor="middle" class="header-text">OFREP Server</text>
+
+  <rect x="630" y="20" width="160" height="28" rx="6" class="header-bg"/>
+  <text x="710" y="38" text-anchor="middle" class="header-text">SSE Stream</text>
+
+  <line x1="130" y1="52" x2="130" y2="390" class="lifeline"/>
+  <line x1="420" y1="52" x2="420" y2="390" class="lifeline"/>
+  <line x1="710" y1="52" x2="710" y2="390" class="lifeline"/>
+
+  <line x1="130" y1="90" x2="412" y2="90" class="arrow-req" marker-end="url(#arrowReq)"/>
+  <text x="271" y="86" text-anchor="middle" class="label-req">POST /ofrep/v1/evaluate/flags</text>
+
+  <line x1="420" y1="130" x2="138" y2="130" class="arrow-req" marker-end="url(#arrowReq)"/>
+  <text x="271" y="124" text-anchor="middle" class="label-req">200 {flags, eventStreams}</text>
+  <text x="271" y="144" text-anchor="middle" class="label-sub">[{type:"sse", endpoint:"/stream"}]</text>
+
+  <text x="416" y="164" text-anchor="middle" class="label-sse">new EventSource(url)</text>
+  <line x1="130" y1="170" x2="702" y2="170" class="arrow-event" marker-end="url(#arrowSse)"/>
+
+  <rect x="355" y="190" width="130" height="24" rx="3" class="box"/>
+  <text x="420" y="206" text-anchor="middle" class="box-text">flags changed</text>
+
+  <line x1="710" y1="246" x2="138" y2="246" class="arrow-hot" marker-end="url(#arrowHot)"/>
+  <text x="416" y="240" text-anchor="middle" class="label-hot">SSE event</text>
+  <text x="416" y="260" text-anchor="middle" class="label-opt">{etag:"abc", type:"refetchEvaluation"}</text>
+
+  <line x1="130" y1="290" x2="412" y2="290" class="arrow-req" marker-end="url(#arrowReq)"/>
+  <text x="271" y="284" text-anchor="middle" class="label-req">POST /evaluate/flags?flagConfigEtag=abc</text>
+
+  <line x1="420" y1="330" x2="138" y2="330" class="arrow-req" marker-end="url(#arrowReq)"/>
+  <text x="271" y="324" text-anchor="middle" class="label-req">304 Not Modified | 200 {flags}</text>
+
+  <rect x="52" y="350" width="156" height="24" rx="4" class="box"/>
+  <text x="130" y="366" text-anchor="middle" class="box-text">UI render</text>
+
+  <line x1="40" y1="408" x2="800" y2="408" class="divider"/>
+  <line x1="50" y1="420" x2="80" y2="420" class="arrow-req" marker-end="url(#arrowReq)"/>
+  <text x="90" y="424" class="legend-text">HTTP request/response</text>
+  <line x1="240" y1="420" x2="270" y2="420" class="arrow-event" marker-end="url(#arrowSse)"/>
+  <text x="280" y="424" class="legend-text">SSE connection</text>
+  <line x1="400" y1="420" x2="430" y2="420" class="arrow-hot" marker-end="url(#arrowHot)"/>
+  <text x="440" y="424" class="legend-text">SSE event</text>
+</svg>
