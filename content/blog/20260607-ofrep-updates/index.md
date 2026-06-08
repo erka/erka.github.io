@@ -64,7 +64,7 @@ Each entry describes a real-time notification channel. The `type` identifies the
 
 When the provider sees `eventStreams`, it connects using the `EventSource` API and receives events:
 
-```
+```sh
 event: message
 data: {"etag":"abcdef1","type":"refetchEvaluation"}
 ```
@@ -110,7 +110,7 @@ There is a [minimal demo](https://github.com/erka/ofrep-sse) that shows the full
 
 **stream.txt** - static SSE events. When `flags.json` is edited to change `my-flag` from `true` to `false`, `stream.txt` is updated to emit a `refetchEvaluation` event:
 
-```
+```sh
 event: message
 data: {"etag":"abcdef1","type":"refetchEvaluation"}
 ```

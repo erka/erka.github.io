@@ -57,11 +57,8 @@
     {{ template "_internal/schema.html" . }}
 
     <!-- style -->
-    <link
-      media="screen"
-      rel="stylesheet"
-      href='{{ "css/common.css" | absURL }}'
-    />
+    {{ $css := resources.Get "css/common.css" | minify | fingerprint }}
+    <link media="screen" rel="stylesheet" href="{{ $css.RelPermalink }}" />
     <!-- title -->
     {{ if .IsHome }}
     <title>{{ .Site.Title }}</title>
